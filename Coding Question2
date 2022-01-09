@@ -1,0 +1,52 @@
+package labTest;
+
+import java.util.Scanner;
+
+public class LabTest1_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int sales,hours;
+		double com=0,wages;
+		
+		System.out.print("Enter sales        : RM");
+		sales = sc.nextInt();
+		
+		System.out.print("Enter hours worked :");
+		hours = sc.nextInt();
+		
+		//150-300=5%
+		//301-500=10%
+		//>500=15%
+
+		System.out.println("");
+		if(sales>=150 && sales<=300)
+		{
+			com = sales*5/100;
+			wages = (hours*5)+com;
+		System.out.printf("Comission           : RM %.2f\n" , com);
+		System.out.printf("Daily wages         : RM %.2f\n" , wages );
+		} 
+		else if(sales>=301 && sales<=500)
+		{
+			com = sales*10/100;
+			wages = (hours*5)+com;
+		System.out.printf("Comission          : RM %.2f\n" , com);
+		System.out.printf("Daily wages         : RM %.2f\n" , wages );
+		}
+		else 
+		{
+			com = sales*15/100;
+			wages = (hours*5)+com;
+		System.out.printf("Comission           : RM %.2f\n" , com);
+		System.out.printf("Daily wages         : RM %.2f\n" , wages );
+		}
+		
+		sc.close();
+		
+		
+	}
+
+}
