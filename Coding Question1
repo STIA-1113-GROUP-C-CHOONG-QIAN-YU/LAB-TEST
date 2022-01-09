@@ -6,51 +6,59 @@ public class LabTest1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int item, firstItem, secondItem, thirdItem, fourthItem;
-		double firstPrice, secondPrice, thirdPrice, fourthPrice;
-		double totalPrice, discount, paid;
-
+		System.out.println("     Welcome to C_MARTS shopping complex!");
+		System.out.println("----------------------------------------------------------");
+		
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Enter the number of item:");
-		item= sc.nextInt();
+		System.out.println("Enter total number of item: ");
+		int item=sc.nextInt();
+		
+		if(item<=3) {
+			System.out.println("Enter the quantity of first item:");
+			int firstItem= sc.nextInt();
+			
+			System.out.println("Enter price of first item:");
+			double firstPrice= sc.nextDouble();
+			
+			System.out.println("Enter the quantity of second item:");
+			int secondItem= sc.nextInt();
+			
+			System.out.println("Enter price of second item:");
+			double secondPrice= sc.nextDouble();
+			
+			System.out.println("Enter the quantity of third item:");
+			int thirdItem= sc.nextInt();
+			
+			System.out.println("Enter price of third item:");
+			double thirdPrice= sc.nextDouble();
+			
+			double totalPrice = (firstPrice*firstItem)+(secondPrice*secondItem)+(thirdPrice*thirdItem);
+			double discount=0,paid=0;
+			System.out.println("Total Price : RM "+totalPrice);
+			if(totalPrice>=100) {
+				discount = (totalPrice*20)/100;
+				System.out.println("Discount received:RM "+discount);
 
-		System.out.println("Enter price of first item:");
-		firstPrice= sc.nextDouble();
+				paid = totalPrice-discount;
+				System.out.println("Price to be paid:RM "+paid);
+			}
+			else if (totalPrice<100)
+				discount= (totalPrice*10)/100;
+				System.out.println("Discount received:RM "+discount);
 
-		System.out.println("Enter the quantity of first item:");
-		firstItem= sc.nextInt();
-
-		System.out.println("Enter price of second item:");
-		secondPrice= sc.nextDouble();
-
-		System.out.println("Enter the quantity of second item:");
-		secondItem= sc.nextInt();
-
-		System.out.println("Enter price of third item:");
-		thirdPrice= sc.nextDouble();
-
-		System.out.println("Enter the quantity of third item:");
-		thirdItem= sc.nextInt();
-
-		System.out.println("Enter price of fourth item:");
-		fourthPrice= sc.nextDouble();
-
-		System.out.println("Enter the quantity of fourth item:");
-		fourthItem= sc.nextInt();
-
-		totalPrice = (firstPrice*firstItem)+(secondPrice*secondItem)+(thirdPrice*thirdItem)+(fourthPrice*fourthItem);
-		System.out.println("Total price: RM"+totalPrice);
-
-		if(totalPrice>200)
-			discount = (totalPrice*20)/100;
-
-		else discount= (totalPrice*10)/100;
+				paid = totalPrice-discount;
+				System.out.println("Price to be paid:RM "+paid);
+		
 		//20% for more than RM100, 10% for less than RM100
-		System.out.println("Discount received:RM "+discount);
-
-		paid = totalPrice-discount;
-		System.out.println("Price to be paid:RM "+paid);
+		
 	}
+		else
+			System.out.println("Sorry, you have exceed the limit number of item!");
+		
+		System.out.println("Thank you for purchasing!");
+		}
+
+		
 
 }
