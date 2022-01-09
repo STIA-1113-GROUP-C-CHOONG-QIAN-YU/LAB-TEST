@@ -1,21 +1,20 @@
-Enter the number of item:
-4
-Enter price of first item:
-100
-Enter the quantity of first item:
+     Welcome to C_MARTS shopping complex!
+----------------------------------------------------------
+Enter total number of item: 
 3
-Enter price of second item:
-60
+Enter the quantity of first item:
+2
+Enter price of first item:
+50
 Enter the quantity of second item:
 4
-Enter price of third item:
-40
-Enter the quantity of third item:
-2
-Enter price of fourth item:
+Enter price of second item:
 20
-Enter the quantity of fourth item:
+Enter the quantity of third item:
 5
-Total price: RM720.0
-Discount received:RM 144.0
-Price to be paid:RM 576.0
+Enter price of third item:
+10
+Total Price : RM 230.0
+Discount received:RM 46.0
+Price to be paid:RM 184.0
+Thank you for purchasing!
